@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "populator"
   gem.homepage = "http://github.com/uchouhan/populator"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Populator is a utility to parse data files.}
+  gem.description = %Q{Populator is a utility to parse data files.}
   gem.email = "uchouhan@optimiscorp.com"
   gem.authors = ["Umang Chouhan"]
   # dependencies defined in Gemfile
