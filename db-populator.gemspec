@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "db-populator.gemspec",
     "lib/populator.rb",
     "lib/populator/errors.rb",
     "lib/populator/fakes.rb",
