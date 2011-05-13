@@ -1,7 +1,4 @@
-Populator
-=========
-
-http://travis-ci.org/optimis/populator.png
+== Populator http://travis-ci.org/optimis/populator.png
 
 Populator includes helper methods to ease parsing data files. Assigning a header and iterating over rows is handled by the module via a simple configuration.
 
