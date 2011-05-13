@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
     "spec/populator_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/uchouhan/populator}
+  s.homepage = %q{http://github.com/optimis/populator}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
