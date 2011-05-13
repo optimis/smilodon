@@ -14,8 +14,8 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "populator"
-  gem.homepage = "http://github.com/optimis/populator"
+  gem.name = "db-populator"
+  gem.homepage = "http://github.com/optimis/db-populator"
   gem.license = "MIT"
   gem.summary = %Q{Populator is a utility to parse data files.}
   gem.description = %Q{Populator is a utility to parse data files.}
