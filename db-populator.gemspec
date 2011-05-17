@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{db-populator}
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
-  s.date = %q{2011-05-12}
+  s.date = %q{2011-05-17}
   s.description = %q{Populator is a utility to parse data files.}
   s.email = %q{uchouhan@optimiscorp.com}
   s.extra_rdoc_files = [
@@ -30,8 +30,10 @@ Gem::Specification.new do |s|
     "lib/populator/errors.rb",
     "lib/populator/fakes.rb",
     "lib/populator/logger.rb",
+    "lib/tasks/populate.rake",
     "populator.gemspec",
-    "spec/populator_spec.rb",
+    "spec/lib/populator_spec.rb",
+    "spec/lib/tasks/populate_spec.rb",
     "spec/spec_helper.rb"
   ]
   s.homepage = %q{http://github.com/optimis/db-populator}
