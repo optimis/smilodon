@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{db-populator}
-  s.version = "0.1.5"
+  s.version = "0.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
     "lib/populator/errors.rb",
     "lib/populator/fakes.rb",
     "lib/populator/logger.rb",
-    "lib/tasks.rb",
+    "lib/populator/tasks.rb",
     "lib/tasks/populate.rake",
     "populator.gemspec",
     "spec/lib/populator_spec.rb",
