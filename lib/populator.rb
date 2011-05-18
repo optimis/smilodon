@@ -1,6 +1,5 @@
 require 'populator/errors'
 require 'populator/logger'
-require 'populator/tasks' if defined?(Rails)
 
 # Populator includes helper methods to ease parsing data files.
 # Assigning a header and iterating over rows is handled by the
