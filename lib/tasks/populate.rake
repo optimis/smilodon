@@ -19,6 +19,6 @@ namespace :db do
   end
 
   def populators
-    configuration[:populators]
+    configuration['populators']
   end
 end
