@@ -4,7 +4,10 @@ namespace :db do
   desc 'Runs the populators defined in the configuration file'
 
   task :populate => :environment do
-    populators.each { |populator| Kernel.const_get(populator).run }
+    populators.each do |populator|
+      require "#{Rails.root}/config/#{populator}"
+      Kernel.const_get(populator).split('_').collect(&:capitalize).run
+    end
   end
 
   private
