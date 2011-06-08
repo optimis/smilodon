@@ -6,7 +6,7 @@ namespace :db do
   task :populate => :environment do
     populators.each do |populator|
       require "#{Rails.root}/db/populate/#{populator}"
-      Kernel.const_get(populator).split('_').collect(&:capitalize).run
+      Kernel.const_get(populator.split('_').collect(&:capitalize)).run
     end
   end
 
