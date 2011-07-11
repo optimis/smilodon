@@ -5,8 +5,8 @@ namespace :db do
 
   task :populate => :environment do
     populators.each do |populator|
-      require "#{Rails.root}/db/populate/#{populator}"
-      Kernel.const_get(populator.split('_').collect(&:capitalize).join).run
+      require "#{Rails.root}/db/populate/#{populator}" if defined?(Rails)
+      Kernel.const_get(populator).run
     end
   end
 
@@ -22,6 +22,6 @@ namespace :db do
   end
 
   def populators
-    configuration['populators']
+    configuration[:populators]
   end
 end

@@ -1,16 +1,16 @@
 require 'spec/spec_helper'
-require 'populator/fakes'
+require 'smilodon/fakes'
 
-describe Populator, 'DIRECTORY' do
+describe Smilodon::Populator, 'DIRECTORY' do
   it 'should be set to the default directory' do
-    Populator::DIRECTORY.should == 'files'
+    Smilodon::Populator::DIRECTORY.should == 'files'
   end
 end
 
 describe FakePopulator, '.directory' do
   context 'when no directory is configured' do
     it 'should return the default directory' do
-      FakePopulator.directory.should == Populator::DIRECTORY
+      FakePopulator.directory.should == Smilodon::Populator::DIRECTORY
     end
   end
 

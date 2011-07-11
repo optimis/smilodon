@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "db-populator"
-  gem.homepage = "http://github.com/optimis/db-populator"
+  gem.name = "smilodon"
+  gem.homepage = "http://github.com/optimis/smilodon"
   gem.license = "MIT"
-  gem.summary = %Q{Populator is a utility to parse data files.}
-  gem.description = %Q{Populator is a utility to parse data files.}
+  gem.summary = %Q{Smilodon is a utility to parse data files.}
+  gem.description = %Q{Smilodon is a utility to parse data files.}
   gem.email = "uchouhan@optimiscorp.com"
   gem.authors = ["Umang Chouhan"]
   # dependencies defined in Gemfile
@@ -41,4 +41,4 @@ task :default => :spec
 require 'yard'
 YARD::Rake::YardocTask.new
 
-require 'populator/tasks'
+require 'smilodon/tasks'

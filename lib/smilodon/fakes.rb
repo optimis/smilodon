@@ -2,7 +2,7 @@
 module FakePopulator
 
   # Extend it with the Populator module.
-  extend Populator
+  extend Smilodon::Populator
 
   # Populate the test file.
   populates 'TestFile'
@@ -12,7 +12,7 @@ end
 module FakePopulatorWithOverriddenType
 
   # Extend it with the Populator module.
-  extend Populator
+  extend Smilodon::Populator
 
   # Populate the test excel file.
   populates 'TestExcelFile', :type => 'excel'
@@ -22,7 +22,7 @@ end
 module FakePopulatorWithOverriddenDirectory
 
   # Extend it with the Populator module.
-  extend Populator
+  extend Smilodon::Populator
 
   # Populate the test file.
   populates 'TestFile', :directory => 'db/populate/files'

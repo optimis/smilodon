@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{db-populator}
+  s.name = %q{smilodon}
   s.version = "0.1.13"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
-  s.date = %q{2011-06-07}
-  s.description = %q{Populator is a utility to parse data files.}
+  s.date = %q{2011-07-11}
+  s.description = %q{Smilodon is a utility to parse data files.}
   s.email = %q{uchouhan@optimiscorp.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -26,22 +26,23 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "db-populator.gemspec",
-    "lib/populator.rb",
-    "lib/populator/errors.rb",
-    "lib/populator/fakes.rb",
-    "lib/populator/logger.rb",
-    "lib/populator/tasks.rb",
+    "lib/smilodon.rb",
+    "lib/smilodon/errors.rb",
+    "lib/smilodon/fakes.rb",
+    "lib/smilodon/logger.rb",
+    "lib/smilodon/tasks.rb",
     "lib/tasks/populate.rake",
+    "lib/tasks/populate.yml",
     "populator.gemspec",
-    "spec/lib/populator_spec.rb",
+    "spec/lib/smilodon_spec.rb",
     "spec/lib/tasks/populate_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = %q{http://github.com/optimis/db-populator}
+  s.homepage = %q{http://github.com/optimis/smilodon}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Populator is a utility to parse data files.}
+  s.summary = %q{Smilodon is a utility to parse data files.}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION

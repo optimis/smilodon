@@ -1,6 +1,7 @@
 require 'spec/spec_helper'
-require 'populator/fakes'
+require 'smilodon/fakes'
 require 'rake'
+
 load 'tasks/populate.rake'
 
 describe 'db:populate' do
