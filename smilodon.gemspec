@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{smilodon}
-  s.version = "0.1.13"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
@@ -25,7 +25,6 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "db-populator.gemspec",
     "lib/smilodon.rb",
     "lib/smilodon/errors.rb",
     "lib/smilodon/fakes.rb",
@@ -34,6 +33,7 @@ Gem::Specification.new do |s|
     "lib/tasks/populate.rake",
     "lib/tasks/populate.yml",
     "populator.gemspec",
+    "smilodon.gemspec",
     "spec/lib/smilodon_spec.rb",
     "spec/lib/tasks/populate_spec.rb",
     "spec/spec_helper.rb"
