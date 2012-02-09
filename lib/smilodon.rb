@@ -94,7 +94,11 @@ module Smilodon
     # 
     # @return [String] The absolute path.
     def path
-      "#{Rails.root}/#{directory}/#{file}.#{type}"
+      if defined?(Rails) 
+        "#{Rails.root}/#{directory}/#{file}.#{type}"
+      else
+        "#{directory}/#{file}.#{type}"
+      end
     end
 
     # Reads the data file.
