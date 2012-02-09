@@ -1,5 +1,6 @@
 require 'smilodon/errors'
 require 'smilodon/logger'
+require 'csv'
 
 # Smilodon includes helper methods to ease parsing data files.
 # Assigning a header and iterating over rows is handled by the
