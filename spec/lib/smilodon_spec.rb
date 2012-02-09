@@ -23,7 +23,7 @@ end
 
 describe FakePopulator, '.file' do
   it 'should return the configured file name' do
-    FakePopulator.file.should == 'TestFile'
+    FakePopulator.files.should == ['TestFile']
   end
 end
 
@@ -46,5 +46,20 @@ describe FakePopulator, '.process(row)' do
     lambda {
       FakePopulator.process
     }.should raise_exception(MethodNotOverridden)
+  end
+end
+
+describe FakePopulator, '.files' do
+  it 'should return the configured file names' do
+    FakePopulatorWithMultipleFiles.files.should == ['TestFile1', 'TestFile2', 'TestFile3']
+  end
+
+  it 'should handle an options hash' do
+    FakePopulatorWithMultipleFiles.directory.should == 'db/populate/files'
+  end
+
+  it 'calls read for each file passed to populate' do
+    FakePopulatorWithMultipleFiles.files.each { |f| FakePopulatorWithMultipleFiles.should_receive(:read).with(f).and_return('') }
+    FakePopulatorWithMultipleFiles.run
   end
 end
