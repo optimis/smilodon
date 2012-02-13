@@ -67,8 +67,10 @@ module Smilodon
         send(before) if before
 
         rows = parser.parse(read(f))
-        rows.shift if header
-        rows.count.times { process(rows.shift) }
+        rows.count.times do |index|
+          row = rows.shift
+          process(row) unless index == 0 && header
+        end
       end
 
       # Return true when all rows are processed.
