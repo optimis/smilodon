@@ -68,8 +68,11 @@ module Smilodon
 
         rows = parser.parse(read(f))
         rows.each_with_index do |row, index|
-          row = rows.shift if index == 0 && header
-          process(row)
+          if index == 0 && header
+            row = header = rows.shift
+          else
+            process(row)
+          end
         end
       end
 
