@@ -67,9 +67,9 @@ module Smilodon
         send(before) if before
 
         rows = parser.parse(read(f))
-        rows.count.times do |index|
-          row = rows.shift
-          process(row) unless index == 0 && header
+        rows.each_with_index do |row, index|
+          row = rows.shift if index == 0 && header
+          process(row)
         end
       end
 
