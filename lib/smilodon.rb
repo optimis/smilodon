@@ -65,11 +65,10 @@ module Smilodon
         # @usage
         #   populates 'TestFile', :before => :inactivate
         send(before) if before
-
         rows = parser.parse(read(f))
         rows.each_with_index do |row, index|
           if index == 0 && header
-            row = header = rows.shift
+            self.header = row
           else
             process(row)
           end

@@ -63,3 +63,46 @@ describe FakePopulator, '.files' do
     FakePopulatorWithMultipleFiles.run
   end
 end
+
+describe FakePopulator, '.run' do
+  module TestPopulator
+    extend Smilodon::Populator
+    populates 'abc'
+  end
+
+  context 'header is true' do
+    let!(:csv) { ["id,name", "1,atsuya"].join("\n") }
+
+    before do 
+      TestPopulator.header = true
+      TestPopulator.stub(:read).and_return(csv)
+      TestPopulator.should_receive(:process).once
+      TestPopulator.run
+    end
+
+    it 'should process csv file' do
+      TestPopulator.header.should == ["id", "name"]
+    end
+
+    it 'calls process for each non-header row' do
+    end
+  end
+
+  context 'header is false' do
+    let!(:csv) { ["id,name", "1,atsuya"].join("\n") }
+
+    before do
+      TestPopulator.header = false
+      TestPopulator.stub(:read).and_return(csv)
+      TestPopulator.should_receive(:process).twice
+      TestPopulator.run
+    end
+
+    it 'should process csv file' do
+      TestPopulator.header.should == false
+    end
+    
+    it 'calls process for each row' do
+    end
+  end
+end
