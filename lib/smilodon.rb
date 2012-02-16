@@ -47,11 +47,16 @@ module Smilodon
 
       options = args.last.is_a?(Hash) ? args.pop : {}
 
-      self.files = args
-      self.directory = options[:directory] || DIRECTORY
+
+      self.directory = if defined?(Rails) 
+        "#{Rails.root}/#{options[:directory] || DIRECTORY}"
+      else
+        options[:directory] || DIRECTORY
+      end
       self.type = options[:type] || TYPE
       self.header = options[:header]
       self.before = options[:before]
+      self.files = args.empty? ? grab_files : args
     end
 
     # Parses the data file content and processes each row.
@@ -87,7 +92,13 @@ module Smilodon
     end
 
     private
-    
+
+    def grab_files
+      Dir.glob("#{directory}/*").map do |file|
+        File.basename(file, File.extname(file))
+      end
+    end
+
     # The parser to use based on the type of data file.
     #
     # @param [String] Name of file to be read
@@ -103,11 +114,7 @@ module Smilodon
     # 
     # @return [String] The absolute path.
     def path(file)
-      if defined?(Rails) 
-        "#{Rails.root}/#{directory}/#{file}.#{type}"
-      else
-        "#{directory}/#{file}.#{type}"
-      end
+      "#{directory}/#{file}.#{type}"
     end
 
     # Reads the data file.

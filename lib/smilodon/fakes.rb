@@ -37,3 +37,13 @@ module FakePopulatorWithMultipleFiles
   # Populate the test file.
   populates 'TestFile1', 'TestFile2', 'TestFile3', :directory => 'db/populate/files'
 end
+
+# A fake populator module with overridden directory for testing.
+module FakePopulatorWithOnlyDirectory
+
+  # Extend it with the Populator module.
+  extend Smilodon::Populator
+
+  # Populate the test file.
+  populates :directory => 'spec/test_files'
+end

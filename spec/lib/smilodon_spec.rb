@@ -62,6 +62,12 @@ describe FakePopulator, '.files' do
     FakePopulatorWithMultipleFiles.files.each { |f| FakePopulatorWithMultipleFiles.should_receive(:read).with(f).and_return('') }
     FakePopulatorWithMultipleFiles.run
   end
+
+  context 'given a directory and no files' do
+    it 'sets files to all the files in directory' do
+      FakePopulatorWithOnlyDirectory.files.should == ['bar', 'foo']
+    end
+  end
 end
 
 describe FakePopulator, '.run' do
