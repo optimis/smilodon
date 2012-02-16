@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{smilodon}
-  s.version = "0.2.7"
+  s.version = "0.2.8"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
-  s.date = %q{2012-02-13}
+  s.date = %q{2012-02-15}
   s.description = %q{Smilodon is a utility to parse data files.}
   s.email = %q{uchouhan@optimiscorp.com}
   s.extra_rdoc_files = [
@@ -35,7 +35,9 @@ Gem::Specification.new do |s|
     "smilodon.gemspec",
     "spec/lib/smilodon_spec.rb",
     "spec/lib/tasks/populate_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "spec/test_files/bar.csv",
+    "spec/test_files/foo.csv"
   ]
   s.homepage = %q{http://github.com/optimis/smilodon}
   s.licenses = ["MIT"]
