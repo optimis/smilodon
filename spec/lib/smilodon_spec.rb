@@ -65,7 +65,7 @@ describe FakePopulator, '.files' do
 
   context 'given a directory and no files' do
     it 'sets files to all the files in directory' do
-      FakePopulatorWithOnlyDirectory.files.should == ['bar', 'foo']
+      FakePopulatorWithOnlyDirectory.files.sort.should == ['bar', 'foo'].sort
     end
   end
 end
