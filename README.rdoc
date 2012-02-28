@@ -1,6 +1,6 @@
 == Populator http://travis-ci.org/optimis/populator.png
 
-http://dinofelis-cristata.artspots.com/image_sizes/0012/1985/smilodon_populator.jpg
+http://www.paleospot.com/illustrations/Smilodon.jpg
 
 Populator includes helper methods to ease parsing data files. Assigning a header and iterating over rows is handled by the module via a simple configuration.
 
