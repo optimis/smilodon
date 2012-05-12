@@ -1,7 +1,3 @@
-# Require the logging gem.
-require 'bundler/setup'
-require 'logging'
-
 # The populate logger class.
 class PopulateLogger
 

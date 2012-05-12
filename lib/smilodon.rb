@@ -1,3 +1,5 @@
+require 'bundler/setup'
+
 require 'smilodon/errors'
 require 'smilodon/logger'
 require 'smilodon/railtie' if defined?(Rails)
