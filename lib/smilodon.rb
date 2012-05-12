@@ -1,5 +1,7 @@
 require 'smilodon/errors'
 require 'smilodon/logger'
+require 'smilodon/railtie' if defined?(Rails)
+
 require 'csv'
 
 # Smilodon includes helper methods to ease parsing data files.
@@ -47,12 +49,12 @@ module Smilodon
 
       options = args.last.is_a?(Hash) ? args.pop : {}
 
-
       self.directory = if defined?(Rails) 
         "#{Rails.root}/#{options[:directory] || DIRECTORY}"
       else
         options[:directory] || DIRECTORY
       end
+
       self.type = options[:type] || TYPE
       self.header = options[:header]
       self.before = options[:before]
@@ -63,7 +65,6 @@ module Smilodon
     #
     # @return [Boolean] Returns true if all rows are processed successfully.
     def run
-
       files.each do |f|
         # Call the before hook if defined.
         #
@@ -92,7 +93,6 @@ module Smilodon
     end
 
     private
-
     def grab_files
       Dir.glob("#{directory}/*").map do |file|
         File.basename(file, File.extname(file))
