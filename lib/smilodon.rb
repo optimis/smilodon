@@ -2,8 +2,6 @@ require 'smilodon/errors'
 require 'smilodon/logger'
 require 'smilodon/railtie' if defined?(Rails)
 
-require 'csv'
-
 # Smilodon includes helper methods to ease parsing data files.
 # Assigning a header and iterating over rows is handled by the
 # module via a simple configuration.
