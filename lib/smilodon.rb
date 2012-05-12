@@ -1,7 +1,6 @@
 require 'bundler/setup'
 
 require 'smilodon/errors'
-require 'smilodon/logger'
 require 'smilodon/railtie' if defined?(Rails)
 
 # Smilodon includes helper methods to ease parsing data files.
@@ -44,9 +43,6 @@ module Smilodon
     # @option options [Boolean] :header Set true if the file has a header.
     # @option options [String] :before The method to call before the run.
     def populates(*args)
-      # Setup the logger to log populator warnings and messages.
-      self.logger = PopulateLogger.setup
-
       options = args.last.is_a?(Hash) ? args.pop : {}
 
       self.directory = if defined?(Rails) 
