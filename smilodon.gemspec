@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{smilodon}
+  s.name = "smilodon"
   s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Umang Chouhan"]
-  s.date = %q{2012-02-16}
-  s.description = %q{Smilodon is a utility to parse data files.}
-  s.email = %q{uchouhan@optimiscorp.com}
+  s.date = "2012-07-25"
+  s.description = "Smilodon is a utility to parse data files."
+  s.email = "uchouhan@optimiscorp.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
     "README.rdoc"
@@ -39,11 +39,11 @@ Gem::Specification.new do |s|
     "spec/test_files/bar.csv",
     "spec/test_files/foo.csv"
   ]
-  s.homepage = %q{http://github.com/optimis/smilodon}
+  s.homepage = "http://github.com/optimis/smilodon"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.2}
-  s.summary = %q{Smilodon is a utility to parse data files.}
+  s.rubygems_version = "1.8.15"
+  s.summary = "Smilodon is a utility to parse data files."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
