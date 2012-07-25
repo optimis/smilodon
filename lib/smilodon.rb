@@ -122,7 +122,8 @@ module Smilodon
     def read(file)
       raise DataFileNotConfigured unless file
       raise MissingDataFile unless File.exist?(path(file))
-      File.read path(file)
+
+      Iconv.conv 'UTF-8', 'ISO-8859-1', File.read(path(file))
     end
   end
 end
