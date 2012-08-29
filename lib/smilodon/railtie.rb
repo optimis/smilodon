@@ -6,7 +6,7 @@ module Smilodon
     railtie_name :smilodon
 
     rake_tasks do
-      load 'tasks/smilodon.rake'
+      load 'tasks/populate.rake'
     end
   end
 end
