@@ -102,7 +102,7 @@ module Smilodon
     def parser
       if type == 'csv'
         require 'csv'
-        return CSV::Reader
+        return CSV
       end
     end
 
