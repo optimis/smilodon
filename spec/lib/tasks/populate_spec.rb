@@ -1,6 +1,7 @@
 require 'spec_helper'
 require 'smilodon/fakes'
 require 'rake'
+require 'yaml'
 
 load 'tasks/populate.rake'
 
