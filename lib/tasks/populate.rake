@@ -26,6 +26,6 @@ namespace :db do
   end
 
   def populators
-    defined?(Rails) ? configuration['populators'] : configuration[:populators]
+    (defined?(Rails) ? configuration['populators'] : configuration[:populators]) || []
   end
 end
